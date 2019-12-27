@@ -19,9 +19,9 @@ rm 0.1.zip
 <b>Modelo de uso:</b>
 
 - -m: Para enviar uma mensagem
-<pre>telegram -m "ID Chat" "Meu assunto" "Minha mensagem..."</pre>
-<pre>telegram -m "123456789" "Notificação" "Ataque identificado"</pre>
+<pre>telegram -m "ID Chat" "Meu assunto" "Minha mensagem..."
+telegram -m "123456789" "Notificação" "Ataque identificado"</pre>
 
 - -f: Para enviar um arquivo (o memos será zipado)
-<pre>telegram -f "ID Chat" "/diretorio/arquivo" "nome do arquivo zip" "Comentário"</pre>
-<pre>telegram -f 12345689 /var/log/syslog syslog "Logs do sistema"</pre>
+<pre>telegram -f "ID Chat" "/diretorio/arquivo" "nome do arquivo zip" "Comentário"
+telegram -f 12345689 /var/log/syslog syslog "Logs do sistema"</pre>
