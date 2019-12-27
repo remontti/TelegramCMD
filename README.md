@@ -11,11 +11,10 @@ CentOS / Fedora / Red hat
 
 <b>Instalacação:</b>
 <pre>cd /tmp/
-wget https://github.com/remontti/TelegramCMD/archive/0.1.zip
-unzip /tmp/0.1.zip
-chmod 777 /tmp/TelegramCMD-0.1/telegram
-mv /tmp/TelegramCMD-0.1/telegram* /usr/local/bin/
-mv * /usr/local/bin/</pre>
+wget https://github.com/remontti/TelegramCMD/archive/master.zip
+unzip /tmp/master.zip
+chmod 777 /tmp/TelegramCMD-master/telegram
+mv /tmp/TelegramCMD-master/telegram* /usr/local/bin/</pre>
 
 <b>Modelo de uso:</b>
 
