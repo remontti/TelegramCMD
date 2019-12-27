@@ -13,7 +13,8 @@ CentOS / Fedora / Red hat
 <pre>cd /tmp/
 wget https://github.com/remontti/TelegramCMD/archive/0.1.zip
 unzip /tmp/0.1.zip
-cd /tmp/TelegramCMD-0.1
+chmod 777 /tmp/TelegramCMD-0.1/telegram
+mv /tmp/TelegramCMD-0.1/telegram* /usr/local/bin/
 mv * /usr/local/bin/</pre>
 
 <b>Modelo de uso:</b>
