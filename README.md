@@ -10,11 +10,11 @@ CentOS / Fedora / Red hat
 <pre>yum install curl wget zip</pre>
 
 <b>Instalacação:</b>
-<pre>cd /usr/local/bin/
+<pre>cd /tmp/
 wget https://github.com/remontti/TelegramCMD/archive/0.1.zip
-unzip 0.1.zip
-rm 0.1.zip
-</pre>
+unzip /tmp/0.1.zip
+cd /tmp/TelegramCMD-0.1
+mv * /usr/local/bin/</pre>
 
 <b>Modelo de uso:</b>
 
