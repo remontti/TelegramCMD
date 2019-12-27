@@ -1,0 +1,37 @@
+#!/bin/bash
+# Autor: remontti.com.br
+
+# Include token
+. $0.conf/token.conf
+
+line_breack="
+"
+if [  "$1" = "-m" ]
+then
+    curl --silent -X POST --data-urlencode "chat_id=-$2" --data-urlencode "text=$3${line_breack=}$4" "https://api.telegram.org/bot${TOKEN}/sendMessage?disable_web_page_preview=true&parse_mode=html" | grep -q '"ok":true' &>/dev/null
+  elif [  "$1" = "-f" ]
+  then
+    datetime=`date +%Y%m%d_%H%M`
+    file_zip_name="/tmp/$4.${datetime}.zip"
+    zip ${file_zip_name} $3 &>/dev/null
+    curl -F document=@"${file_zip_name}" -F caption="$5" "https://api.telegram.org/bot${TOKEN}/sendDocument?chat_id=-$2" &>/dev/null
+    rm ${file_zip_name}
+  else
+    error_file="Error: Lang file not found."
+    lang=$(echo $LANG | cut -d. -f1 | cut -c1-2)
+    case ${lang} in
+        [${lang}]* ) msg_lang=msg.${lang} ;;
+    esac
+    if [ -f $0.conf/lang/${msg_lang} ]; then
+        . $0.conf/lang/${msg_lang}
+    else
+	. $0.conf/lang/msg.en
+    fi
+    if [ "$#" -ne 1 ]
+    then
+        echo "${inc_no_arg}"
+        echo "${usage}"
+        exit 1
+    fi
+fi
+exit 0

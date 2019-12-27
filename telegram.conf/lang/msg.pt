@@ -1,0 +1,11 @@
+inc_no_arg='Opção inválida!'
+usage='
+Uso: telegram [Opções]
+  -m: Para enviar uma mensagem
+     ex: telegram -m "ID Chat" "Meu assunto" "Minha mensagem..."
+     ex: telegram -m "123456789" "Notificação" "Ataque identificado"
+
+  -f: Para enviar um arquivo
+     ex: telegram -f "ID Chat" "/diretorio/arquivo" "nome do arquivo zip" "Comentário"
+     ex: telegram -f 12345689 /var/log/syslog syslog "Logs do sistema"
+'
