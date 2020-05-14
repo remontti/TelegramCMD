@@ -1,5 +1,5 @@
 # TelegramCMD
-Envio de mensagens para o telegram por meio de shell script <br>
+Envio de mensagens para o telegram por meio de shell script para grupo <br>
 
 <b>Requerimentos</b>
 
