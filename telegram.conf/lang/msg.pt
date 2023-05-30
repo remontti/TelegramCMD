@@ -5,7 +5,11 @@ Uso: telegram [Opções]
      ex: telegram -m "ID Chat" "Meu assunto" "Minha mensagem..."
      ex: telegram -m "123456789" "Notificação" "Ataque identificado"
 
-  -f: Para enviar um arquivo
+  -f: Para enviar um arquivo zipado
      ex: telegram -f "ID Chat" "/diretorio/arquivo" "nome do arquivo zip" "Comentário"
-     ex: telegram -f 12345689 /var/log/syslog syslog "Logs do sistema"
+     ex: telegram -f "-12345689" /var/log/syslog syslog "Logs do sistema"
+
+  -t: Para enviar um arquivo sem compactar
+     ex: telegram -f "ID Chat" "/diretorio/arquivo.txt" "Mensagem"
+     ex: telegram -f "-12345689" /var/log/fastnetmon.log "Logs do sistema"
 '
