@@ -16,6 +16,9 @@ then
     zip ${file_zip_name} $3 &>/dev/null
     curl -F document=@"${file_zip_name}" -F caption="$5" "https://api.telegram.org/bot${TOKEN}/sendDocument?chat_id=$2" &>/dev/null
     rm ${file_zip_name}
+  elif [  "$1" = "-t" ]
+  then
+    curl -F document=@"$3" -F caption="$4" "https://api.telegram.org/bot${TOKEN}/sendDocument?chat_id=$2" &>/dev/null
   else
     error_file="Error: Lang file not found."
     lang=$(echo $LANG | cut -d. -f1 | cut -c1-2)
